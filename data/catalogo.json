@@ -1,0 +1,20 @@
+{
+  "nota": "Catálogo ficticio para el taller. Los precios son valores de ejemplo en pesos colombianos (COP), no precios reales de mercado.",
+  "productos": [
+    {"nombre": "Botella reutilizable de acero inoxidable 750 ml", "categoria": "Hogar", "devolvible": true, "precio": 65000},
+    {"nombre": "Bolsa de tela de algodón orgánico", "categoria": "Accesorios", "devolvible": true, "precio": 25000},
+    {"nombre": "Set de utensilios de bambú", "categoria": "Cocina", "devolvible": true, "precio": 38000},
+    {"nombre": "Camiseta de algodón orgánico", "categoria": "Ropa", "devolvible": true, "precio": 79000},
+    {"nombre": "Pitillos de acero inoxidable (set x4)", "categoria": "Cocina", "devolvible": true, "precio": 22000},
+    {"nombre": "Loncheras de vidrio con tapa de bambú (set x2)", "categoria": "Cocina", "devolvible": true, "precio": 89000},
+    {"nombre": "Mochila de material reciclado", "categoria": "Accesorios", "devolvible": true, "precio": 145000},
+    {"nombre": "Envolturas de cera de abejas para alimentos (set x3)", "categoria": "Cocina", "devolvible": true, "precio": 42000},
+    {"nombre": "Café orgánico de origen colombiano 500 g", "categoria": "Perecedero", "devolvible": false, "precio": 36000},
+    {"nombre": "Snacks de frutas deshidratadas", "categoria": "Perecedero", "devolvible": false, "precio": 18000},
+    {"nombre": "Miel de abejas orgánica 500 g", "categoria": "Perecedero", "devolvible": false, "precio": 32000},
+    {"nombre": "Cepillo de dientes de bambú", "categoria": "Higiene personal", "devolvible": false, "precio": 9000},
+    {"nombre": "Jabón sólido artesanal", "categoria": "Higiene personal", "devolvible": false, "precio": 16000},
+    {"nombre": "Copa menstrual de silicona médica", "categoria": "Higiene personal", "devolvible": false, "precio": 85000},
+    {"nombre": "Termo grabado con nombre", "categoria": "Personalizado", "devolvible": false, "precio": 110000}
+  ]
+}

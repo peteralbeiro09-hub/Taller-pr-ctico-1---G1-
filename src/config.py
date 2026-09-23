@@ -1,0 +1,45 @@
+"""Configuración del proyecto: variables de entorno, rutas y carga de prompts TOML."""
+
+import os
+import tomllib
+from pathlib import Path
+
+from dotenv import load_dotenv
+
+RAIZ = Path(__file__).resolve().parent.parent
+DIR_DATOS = RAIZ / "data"
+DIR_PROMPTS = RAIZ / "prompts"
+DIR_RESULTADOS = RAIZ / "results"
+
+# Fecha fija para que plazos de devolución y fechas de entrega sean reproducibles.
+FECHA_REFERENCIA = "2026-09-20"
+TEMPERATURA = 0
+
+load_dotenv(RAIZ / ".env")
+
+
+class ErrorConfiguracion(Exception):
+    """Falta una variable obligatoria en .env."""
+
+
+def obtener_config_llm() -> dict:
+    """Lee LLM_BASE_URL, LLM_API_KEY y LLM_MODEL; falla con un mensaje claro si falta alguna."""
+    variables = ("LLM_BASE_URL", "LLM_API_KEY", "LLM_MODEL")
+    faltantes = [v for v in variables if not os.getenv(v)]
+    if faltantes:
+        raise ErrorConfiguracion(
+            f"Faltan variables en .env: {', '.join(faltantes)}. "
+            "Copia .env.example como .env y complétalo."
+        )
+    return {
+        "base_url": os.getenv("LLM_BASE_URL"),
+        "api_key": os.getenv("LLM_API_KEY"),
+        "modelo": os.getenv("LLM_MODEL"),
+        "pausa_seg": float(os.getenv("LLM_PAUSA_SEG", "0")),
+    }
+
+
+def cargar_toml(nombre: str) -> dict:
+    """Carga prompts/<nombre>.toml."""
+    with open(DIR_PROMPTS / f"{nombre}.toml", "rb") as archivo:
+        return tomllib.load(archivo)

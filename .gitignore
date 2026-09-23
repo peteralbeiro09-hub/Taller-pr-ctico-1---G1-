@@ -1,0 +1,11 @@
+# Secretos
+.env
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Caché de trabajo de evaluar (las respuestas reales quedan en results/*.md)
+results/.cache_respuestas.json
