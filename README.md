@@ -2,7 +2,7 @@
 
 **Taller Práctico #1 — IA Generativa**
 Maestría en Inteligencia Artificial Aplicada
-**Autor:** [VERIFICAR: nombre del autor]
+**Autor:**Pedro Albeiro Jojoa Hernández
 
 ## El caso en tres líneas
 
